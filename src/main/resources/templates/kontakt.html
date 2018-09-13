@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/style-contact.css">
+    <title>Kontakt</title>
+</head>
+<body>
+    <nav class="menu-bar">
+        <a href="index.html">
+            <div id="logo"></div>
+        </a>
+        <a href="index.html">Główna</a>
+        <a href="katalog.html">Katalog</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <div id="contact">
+        <h1>Gdzie nas znaleźć?</h1>
+        <p>Obrońców Tobruku 26/52</p>
+        <p>01-494 Warszawa</p>
+        <p>tel. 123 456 789</p>
+    </div>
+    <div class="contact-form">
+        <h1>Napisz do nas</h1>
+        <form method="post">
+            <div class="form-actions">
+                <button type="submit">Wyślij</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="map"></div>
+    <footer>
+        <p>2018-05-14 Copyright by Rośliny</p>
+    </footer>
+</body>
+<script>
+    function myMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(52.259325, 20.935294),
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+</html>
